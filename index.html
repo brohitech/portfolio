@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rohit Bale | Kid From Mumbai</title>
+<meta name="description" content="Rohit Bale — kid from Mumbai. Developer building things for the web. Explore projects, skills, and get in touch.">
+<meta name="author" content="Rohit Bale">
+<meta name="color-scheme" content="dark light">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rohit Bale | Kid From Mumbai">
+<meta property="og:description" content="Kid from Mumbai. Developer building things for the web.">
+<meta property="og:image" content="assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="web-layer" aria-hidden="true">
+  <svg class="web web--tl" viewBox="0 0 200 200" preserveAspectRatio="none">
+    <g fill="none" stroke="currentColor" stroke-width="0.6">
+      <path d="M0 0 L200 0 M0 0 L0 200 M0 0 L200 60 M0 0 L200 120 M0 0 L120 200 M0 0 L60 200"/>
+      <path d="M0 200 A 200 200 0 0 1 200 0" />
+      <path d="M0 150 A 150 150 0 0 1 150 0" />
+      <path d="M0 100 A 100 100 0 0 1 100 0" />
+      <path d="M0 50 A 50 50 0 0 1 50 0" />
+    </g>
+  </svg>
+  <svg class="web web--br" viewBox="0 0 200 200" preserveAspectRatio="none">
+    <g fill="none" stroke="currentColor" stroke-width="0.6">
+      <path d="M200 200 L0 200 M200 200 L200 0 M200 200 L0 140 M200 200 L0 80 M200 200 L80 0 M200 200 L140 0"/>
+      <path d="M0 0 A 200 200 0 0 0 200 200" />
+      <path d="M50 0 A 150 150 0 0 0 200 150" />
+      <path d="M100 0 A 100 100 0 0 0 200 100" />
+      <path d="M150 0 A 50 50 0 0 0 200 50" />
+    </g>
+  </svg>
+  <div class="halftone"></div>
+  <div class="scanlines"></div>
+</div>
+
+<canvas id="web-canvas" class="web-canvas" aria-hidden="true"></canvas>
+
+<header class="site-header" id="site-header">
+  <a class="brand" href="#hero" aria-label="Home">
+    <svg class="brand__mark" viewBox="0 0 200 240" aria-hidden="true">
+      <g stroke="currentColor" stroke-width="7" fill="none" stroke-linecap="round">
+        <path d="M88 100 C 60 80, 40 60, 22 44"/>
+        <path d="M86 118 C 55 112, 30 104, 8 96"/>
+        <path d="M86 134 C 58 140, 34 152, 14 168"/>
+        <path d="M90 148 C 68 168, 54 186, 42 210"/>
+        <path d="M112 100 C 140 80, 160 60, 178 44"/>
+        <path d="M114 118 C 145 112, 170 104, 192 96"/>
+        <path d="M114 134 C 142 140, 166 152, 186 168"/>
+        <path d="M110 148 C 132 168, 146 186, 158 210"/>
+      </g>
+      <ellipse cx="100" cy="178" rx="33" ry="41" fill="currentColor"/>
+      <ellipse cx="100" cy="106" rx="23" ry="21" fill="currentColor"/>
+    </svg>
+    <span class="brand__text">ROHIT<span class="brand__dot">.</span>BALE</span>
+  </a>
+
+  <nav class="nav" aria-label="Main">
+    <ul class="nav__list" id="nav-list">
+      <li><a class="nav__link" href="#about">About</a></li>
+      <li><a class="nav__link" href="#skills">Skills</a></li>
+      <li><a class="nav__link" href="#projects">Projects</a></li>
+      <li><a class="nav__link" href="#github">GitHub</a></li>
+      <li><a class="nav__link" href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light theme" aria-pressed="false">
+    <span class="theme-toggle__track"><span class="theme-toggle__thumb"></span></span>
+  </button>
+
+  <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-list">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="hero">
+    <div class="hero__inner">
+      <p class="hero__eyebrow reveal">
+        <span class="pulse" aria-hidden="true"></span>
+        Available for new opportunities
+      </p>
+
+      <h1 class="hero__title">
+        <span class="hero__line reveal" data-delay="1">HI, I'M</span>
+        <span class="hero__name reveal" data-delay="2">ROHIT</span>
+        <span class="hero__role reveal" data-delay="3">
+          <span class="hero__typed" id="typed" aria-live="polite">Software Engineer</span><span class="caret" aria-hidden="true"></span>
+        </span>
+      </h1>
+
+      <p class="hero__bio reveal" data-delay="4">
+        Kid from Mumbai, building things for the web — mostly the parts users
+        never see. I care about the 40ms that makes an interaction feel instant,
+        the focus ring that makes a site usable with a keyboard, and the query
+        that doesn't scan a whole table.
+      </p>
+
+      <div class="hero__actions reveal" data-delay="5">
+        <a class="btn btn--primary" href="#projects">
+          View Projects
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#contact">Get In Touch</a>
+        <a class="btn btn--icon" href="https://github.com/brohitech" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        </a>
+      </div>
+
+      <dl class="hero__stats reveal" data-delay="6">
+        <div class="stat">
+          <dt>Years shipping</dt>
+          <dd data-count="6">0</dd>
+        </div>
+        <div class="stat">
+          <dt>Projects built</dt>
+          <dd data-count="40">0</dd>
+        </div>
+        <div class="stat">
+          <dt>GitHub contributions</dt>
+          <dd data-count="1200" data-suffix="+">0</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="hero__spider" aria-hidden="true">
+      <div class="spider-logo">
+        <svg viewBox="0 0 200 240">
+          <g stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round">
+            <path d="M88 100 C 60 80, 40 60, 22 44"/>
+            <path d="M86 118 C 55 112, 30 104, 8 96"/>
+            <path d="M86 134 C 58 140, 34 152, 14 168"/>
+            <path d="M90 148 C 68 168, 54 186, 42 210"/>
+            <path d="M112 100 C 140 80, 160 60, 178 44"/>
+            <path d="M114 118 C 145 112, 170 104, 192 96"/>
+            <path d="M114 134 C 142 140, 166 152, 186 168"/>
+            <path d="M110 148 C 132 168, 146 186, 158 210"/>
+          </g>
+          <ellipse cx="100" cy="178" rx="33" ry="41" fill="currentColor"/>
+          <ellipse cx="100" cy="106" rx="23" ry="21" fill="currentColor"/>
+        </svg>
+      </div>
+    </div>
+
+    <a class="scroll-cue" href="#about" aria-label="Scroll to about section">
+      <span class="scroll-cue__line" aria-hidden="true"></span>
+      <span class="scroll-cue__text">SCROLL</span>
+    </a>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>JavaScript</span><span class="sep">✦</span>
+      <span>TypeScript</span><span class="sep">✦</span>
+      <span>React</span><span class="sep">✦</span>
+      <span>Node.js</span><span class="sep">✦</span>
+      <span>Python</span><span class="sep">✦</span>
+      <span>PostgreSQL</span><span class="sep">✦</span>
+      <span>AWS</span><span class="sep">✦</span>
+      <span>Docker</span><span class="sep">✦</span>
+      <span>GraphQL</span><span class="sep">✦</span>
+      <span>JavaScript</span><span class="sep">✦</span>
+      <span>TypeScript</span><span class="sep">✦</span>
+      <span>React</span><span class="sep">✦</span>
+      <span>Node.js</span><span class="sep">✦</span>
+      <span>Python</span><span class="sep">✦</span>
+      <span>PostgreSQL</span><span class="sep">✦</span>
+      <span>AWS</span><span class="sep">✦</span>
+      <span>Docker</span><span class="sep">✦</span>
+      <span>GraphQL</span><span class="sep">✦</span>
+    </div>
+  </div>
+
+  <section class="section" id="about">
+    <header class="section__head">
+      <span class="section__num" aria-hidden="true">01</span>
+      <h2 class="section__title">WHO'S BEHIND THE MASK</h2>
+    </header>
+    <div class="about">
+      <div class="about__text reveal">
+        <p class="lead">
+          I'm a software engineer who cares about the parts users never see —
+          the 40ms that makes an interaction feel instant, the focus ring that
+          makes a site usable with a keyboard, the query that doesn't scan a
+          whole table.
+        </p>
+        <p>
+          I started out tinkering with CSS on a blog that nobody read, and turned
+          that into a career building production systems. These days I lead
+          frontend work on a product serving millions of requests a day, mentor
+          early-career engineers, and maintain a handful of open-source packages.
+        </p>
+        <p>
+          When I'm not shipping, I'm usually reading a paper about database
+          internals, playing pickup basketball, or losing at chess to my laptop.
+        </p>
+        <ul class="facts">
+          <li><span aria-hidden="true">◉</span> Open to Senior / Staff roles</li>
+          <li><span aria-hidden="true">◉</span> Based in Mumbai, IST (UTC+5:30)</li>
+          <li><span aria-hidden="true">◉</span> Writes docs nobody asked for</li>
+        </ul>
+      </div>
+      <aside class="about__card reveal" data-delay="2">
+        <div class="comic-panel">
+          <h3 class="comic-panel__title">THANKS FOR THE WEB</h3>
+          <dl class="spec-list">
+            <div><dt>Role</dt><dd>Senior Software Engineer</dd></div>
+            <div><dt>Focus</dt><dd>Web performance &amp; DX</dd></div>
+            <div><dt>Stack</dt><dd>TypeScript, React, Node</dd></div>
+            <div><dt>Superpower</dt><dd>Making it fast, then making it faster</dd></div>
+            <div><dt>Weakness</dt><dd>Rewrite it again, one more time</dd></div>
+            <div><dt>Status</dt><dd><span class="pulse" aria-hidden="true"></span> Open to offers</dd></div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <header class="section__head">
+      <span class="section__num" aria-hidden="true">02</span>
+      <h2 class="section__title">MY POWERS</h2>
+    </header>
+    <div class="skills" id="skills-grid"></div>
+  </section>
+
+  <section class="section" id="projects">
+    <header class="section__head">
+      <span class="section__num" aria-hidden="true">03</span>
+      <h2 class="section__title">SELECTED WORK</h2>
+    </header>
+
+    <div class="filters" id="project-filters" role="group" aria-label="Filter projects by tag"></div>
+    <p class="filters__status" id="filter-status" role="status" aria-live="polite"></p>
+
+    <div class="projects" id="projects-grid"></div>
+
+    <p class="projects__empty" id="projects-empty" hidden>No projects in this category yet.</p>
+  </section>
+
+  <section class="section" id="github">
+    <header class="section__head">
+      <span class="section__num" aria-hidden="true">04</span>
+      <h2 class="section__title">ON GITHUB</h2>
+    </header>
+
+    <div class="gh">
+      <div class="gh__card comic-panel reveal">
+        <h3 class="comic-panel__title">OPEN SOURCE</h3>
+        <p>
+          I maintain a handful of packages, contribute to projects I use daily, and
+          review PRs where I can. Most of my work is boring on purpose — types,
+          tooling, and the sort of infrastructure that only matters when it's absent.
+        </p>
+        <a class="btn btn--primary" href="https://github.com/brohitech?tab=repositories" target="_blank" rel="noopener noreferrer">
+          Browse My Repos
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <ul class="gh__links">
+        <li class="reveal"><a href="https://github.com/brohitech" target="_blank" rel="noopener noreferrer">github.com/brohitech</a></li>
+        <li class="reveal" data-delay="1"><a href="https://github.com/brohitech?tab=stars" target="_blank" rel="noopener noreferrer">Starred projects</a></li>
+        <li class="reveal" data-delay="2"><a href="https://github.com/brohitech/portfolio" target="_blank" rel="noopener noreferrer">This site's source</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <header class="section__head">
+      <span class="section__num" aria-hidden="true">05</span>
+      <h2 class="section__title">SEND A WEB</h2>
+    </header>
+
+    <div class="contact">
+      <form class="contact__form reveal" id="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required placeholder="Peter Parker">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="With great power comes great responsibility."></textarea>
+        </div>
+        <button class="btn btn--primary btn--block" type="submit">Send Message</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <aside class="contact__alt reveal" data-delay="2">
+        <div class="comic-panel comic-panel--yellow">
+          <h3 class="comic-panel__title">PREFER EMAIL?</h3>
+          <p>I'm quickest at email, and I read every one of them.</p>
+          <a class="link-mail" href="mailto:rohitbale1998@gmail.com">rohitbale1998@gmail.com</a>
+        </div>
+        <ul class="socials">
+          <li><a href="https://github.com/brohitech" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="mailto:rohitbale1998@gmail.com">Email</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p class="site-footer__line" data-quote>
+      <span aria-hidden="true">🕷</span>
+      <span id="footer-quote">With great power there must also come — great responsibility.</span>
+    </p>
+    <p class="site-footer__meta">
+      Built from scratch with HTML, CSS &amp; a lot of web-slinging.
+      <span aria-hidden="true">·</span>
+      <span id="year">2026</span>
+      <span aria-hidden="true">·</span>
+      No trackers, no cookies.
+    </p>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" aria-label="Back to top" hidden>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
